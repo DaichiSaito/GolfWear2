@@ -83,6 +83,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewD
 //                controller.selectedIndexPath = indexPath
                 self.navigationController?.pushViewController(controller, animated: true)
             case dataSource.ROW_PANTS:
+                let controller = self.storyboard!.instantiateViewController( withIdentifier: "colorAndBrand2ViewController" ) as! ColorAndBrand2ViewController
+                //                controller.selectedIndexPath = indexPath
+                self.navigationController?.pushViewController(controller, animated: true)
                 break
             case dataSource.ROW_OUTER:
                 break

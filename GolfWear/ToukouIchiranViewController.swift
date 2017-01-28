@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import NCMB
 class ToukouIchiranViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//import NCMB
+import NCMB
 class UploadImageVM: NSObject {
     dynamic var uploadDoneFlg = false
     var uploadDoneFlgTmp1 = false

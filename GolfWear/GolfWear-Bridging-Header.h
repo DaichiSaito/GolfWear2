@@ -10,6 +10,6 @@
 #define GolfWear_Bridging_Header_h
 #import <MDCSwipeToChoose/MDCSwipeToChoose.h>
 #import <NCMB/NCMB.h>
-#import <AFNetworking/AFNetworking.h>
+//#import <AFNetworking/AFNetworking.h>
 
 #endif /* GolfWear_Bridging_Header_h */

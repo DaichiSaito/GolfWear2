@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23609DC707DB15F75D156098 /* libPods-GolfWear.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0FB4F9FC827A2404ED314F6 /* libPods-GolfWear.a */; };
 		940D82D11E1F4D7F00D116BA /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940D82D01E1F4D7F00D116BA /* TutorialViewController.swift */; };
 		940D82D51E1F501500D116BA /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940D82D41E1F501500D116BA /* HomeStoryboard.storyboard */; };
 		940D82D71E1F520800D116BA /* IchiranStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940D82D61E1F520800D116BA /* IchiranStoryboard.storyboard */; };
@@ -53,6 +52,9 @@
 		943BE8FC1E2B04B200462357 /* ConditionVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BE8FB1E2B04B100462357 /* ConditionVIewModel.swift */; };
 		943BE8FF1E2D57AC00462357 /* PopUpPickerViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BE8FE1E2D57AB00462357 /* PopUpPickerViewBase.swift */; };
 		943BE9011E2D57C700462357 /* PopUpPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943BE9001E2D57C700462357 /* PopUpPickerView.swift */; };
+		943DC5E61E3C538800F4813D /* ColorAndBrand2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC5E51E3C538800F4813D /* ColorAndBrand2ViewController.swift */; };
+		943DC5E81E3C557700F4813D /* SearchBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC5E71E3C557700F4813D /* SearchBrandViewController.swift */; };
+		943DC5EA1E3C59F600F4813D /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC5E91E3C59F600F4813D /* SearchResultViewController.swift */; };
 		9454D9E41E23891E00868BB2 /* IchijiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454D9E31E23891E00868BB2 /* IchijiViewController.swift */; };
 		9454D9E61E23892F00868BB2 /* IchijiStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9454D9E51E23892F00868BB2 /* IchijiStoryboard.storyboard */; };
 		9454D9E91E238B5F00868BB2 /* CommonUtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454D9E81E238B5F00868BB2 /* CommonUtl.swift */; };
@@ -72,11 +74,13 @@
 		948E028F1E0FBDF800600F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 948E028E1E0FBDF800600F7D /* Assets.xcassets */; };
 		948E02921E0FBDF800600F7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948E02901E0FBDF800600F7D /* LaunchScreen.storyboard */; };
 		948F8C431E39EBA8007E2CEA /* BrandTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F8C421E39EBA8007E2CEA /* BrandTableViewCell2.swift */; };
+		B31BABE2BDAEDA4B29036B28 /* Pods_GolfWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DE18F7E5CC6AFCE80CE46 /* Pods_GolfWear.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2CD084C6D88417AC9AFECD83 /* Pods-GolfWear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GolfWear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GolfWear/Pods-GolfWear.debug.xcconfig"; sourceTree = "<group>"; };
 		374DD929A788F6B6FB6144D4 /* Pods-GolfWear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GolfWear.release.xcconfig"; path = "Pods/Target Support Files/Pods-GolfWear/Pods-GolfWear.release.xcconfig"; sourceTree = "<group>"; };
+		8A9DE18F7E5CC6AFCE80CE46 /* Pods_GolfWear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GolfWear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		940D82D01E1F4D7F00D116BA /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TutorialViewController.swift; path = ../TutorialViewController.swift; sourceTree = "<group>"; };
 		940D82D41E1F501500D116BA /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		940D82D61E1F520800D116BA /* IchiranStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IchiranStoryboard.storyboard; sourceTree = "<group>"; };
@@ -122,6 +126,9 @@
 		943BE8FB1E2B04B100462357 /* ConditionVIewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionVIewModel.swift; sourceTree = "<group>"; };
 		943BE8FE1E2D57AB00462357 /* PopUpPickerViewBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpPickerViewBase.swift; sourceTree = "<group>"; };
 		943BE9001E2D57C700462357 /* PopUpPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpPickerView.swift; sourceTree = "<group>"; };
+		943DC5E51E3C538800F4813D /* ColorAndBrand2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAndBrand2ViewController.swift; sourceTree = "<group>"; };
+		943DC5E71E3C557700F4813D /* SearchBrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBrandViewController.swift; sourceTree = "<group>"; };
+		943DC5E91E3C59F600F4813D /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		9454D9E31E23891E00868BB2 /* IchijiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IchijiViewController.swift; sourceTree = "<group>"; };
 		9454D9E51E23892F00868BB2 /* IchijiStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IchijiStoryboard.storyboard; sourceTree = "<group>"; };
 		9454D9E81E238B5F00868BB2 /* CommonUtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtl.swift; sourceTree = "<group>"; };
@@ -144,7 +151,6 @@
 		948E02931E0FBDF800600F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		948E02991E0FBF9A00600F7D /* GolfWear-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GolfWear-Bridging-Header.h"; sourceTree = "<group>"; };
 		948F8C421E39EBA8007E2CEA /* BrandTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandTableViewCell2.swift; sourceTree = "<group>"; };
-		E0FB4F9FC827A2404ED314F6 /* libPods-GolfWear.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GolfWear.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23609DC707DB15F75D156098 /* libPods-GolfWear.a in Frameworks */,
+				B31BABE2BDAEDA4B29036B28 /* Pods_GolfWear.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +177,7 @@
 		33F551FB1DA99FB5B93370FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E0FB4F9FC827A2404ED314F6 /* libPods-GolfWear.a */,
+				8A9DE18F7E5CC6AFCE80CE46 /* Pods_GolfWear.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -194,6 +200,9 @@
 				943BE8D41E287F8700462357 /* SearchTableViewController.swift */,
 				943BE8DE1E2A0D7900462357 /* SearchViewController.swift */,
 				942AD3521E35F67C005AEDE4 /* ColorAndBrandViewController.swift */,
+				943DC5E51E3C538800F4813D /* ColorAndBrand2ViewController.swift */,
+				943DC5E71E3C557700F4813D /* SearchBrandViewController.swift */,
+				943DC5E91E3C59F600F4813D /* SearchResultViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -480,6 +489,8 @@
 				943BE8FF1E2D57AC00462357 /* PopUpPickerViewBase.swift in Sources */,
 				940D82D11E1F4D7F00D116BA /* TutorialViewController.swift in Sources */,
 				9454D9FD1E2634B700868BB2 /* ModelConditions.swift in Sources */,
+				943DC5E61E3C538800F4813D /* ColorAndBrand2ViewController.swift in Sources */,
+				943DC5EA1E3C59F600F4813D /* SearchResultViewController.swift in Sources */,
 				943BE9011E2D57C700462357 /* PopUpPickerView.swift in Sources */,
 				9454D9E91E238B5F00868BB2 /* CommonUtl.swift in Sources */,
 				942AD3531E35F67C005AEDE4 /* ColorAndBrandViewController.swift in Sources */,
@@ -488,6 +499,7 @@
 				943BE8D71E28816D00462357 /* TableViewCellModel.swift in Sources */,
 				943BE8D51E287F8700462357 /* SearchTableViewController.swift in Sources */,
 				943BE8DD1E29B15100462357 /* ColorSelectView.swift in Sources */,
+				943DC5E81E3C557700F4813D /* SearchBrandViewController.swift in Sources */,
 				943BE8F41E2A41A200462357 /* TallTableViewCell.swift in Sources */,
 				9454D9EF1E25008000868BB2 /* SearchConditionViewController.swift in Sources */,
 				9454D9ED1E238DD000868BB2 /* CodeDef.swift in Sources */,

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Bond
 class ColorAndBrandViewController: UIViewController,UITextFieldDelegate {
     
     var colors = [

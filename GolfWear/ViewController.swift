@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import MDCSwipeToChoose
+import NCMB
 class ViewController: UIViewController, MDCSwipeToChooseDelegate, UINavigationControllerDelegate{
     dynamic var imageInfo = [] as NSArray
     fileprivate var frontCardView: MDCSwipeToChooseView?
