@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="03Z-dU-x7c">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hSr-Ji-P0X">
+            <objects>
+                <navigationController id="03Z-dU-x7c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uoz-Mn-ZIQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1yH-W5-8ep" kind="relationship" relationship="rootViewController" id="5B0-mP-Tdp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9d-92-Uyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1049" y="231"/>
+        </scene>
+        <!--My Page View Controller-->
+        <scene sceneID="F8A-t8-UZC">
+            <objects>
+                <viewController id="1yH-W5-8ep" customClass="MyPageViewController" customModule="GolfWear" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5NS-jN-IBV"/>
+                        <viewControllerLayoutGuide type="bottom" id="i7v-zs-yVO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AQu-Q3-yOm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EJE-UJ-DUa">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="A7w-I5-b98">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="4ej-ij-MCe" customClass="MyCollectionViewCell" customModule="GolfWear" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EJE-UJ-DUa" firstAttribute="top" secondItem="5NS-jN-IBV" secondAttribute="bottom" id="9lI-uW-ql0"/>
+                            <constraint firstAttribute="trailing" secondItem="EJE-UJ-DUa" secondAttribute="trailing" id="Hsv-rg-csx"/>
+                            <constraint firstItem="EJE-UJ-DUa" firstAttribute="leading" secondItem="AQu-Q3-yOm" secondAttribute="leading" id="QtP-ZJ-gYa"/>
+                            <constraint firstItem="i7v-zs-yVO" firstAttribute="top" secondItem="EJE-UJ-DUa" secondAttribute="bottom" id="kwz-T6-fzR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="nz3-gD-Q9h"/>
+                    <navigationItem key="navigationItem" id="gSK-xi-MxZ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="EJE-UJ-DUa" id="Qj2-Eu-emN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjM-1m-pUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-364" y="231"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="9AH-HS-xt3">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="N06-DG-hRY" customClass="ProfileViewController" customModule="GolfWear" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CNL-ni-11F"/>
+                        <viewControllerLayoutGuide type="bottom" id="poG-yx-ggZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e6q-SC-XRm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZPA-Y0-eFI">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="ZMc-Al-Mws">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="8Et-rI-JbB" customClass="MyCollectionViewCell" customModule="GolfWear" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="poG-yx-ggZ" firstAttribute="top" secondItem="ZPA-Y0-eFI" secondAttribute="bottom" id="O56-qw-RAn"/>
+                            <constraint firstItem="ZPA-Y0-eFI" firstAttribute="leading" secondItem="e6q-SC-XRm" secondAttribute="leading" id="P4w-C7-VhJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ZPA-Y0-eFI" secondAttribute="trailing" id="Sac-lp-NVo"/>
+                            <constraint firstItem="ZPA-Y0-eFI" firstAttribute="top" secondItem="CNL-ni-11F" secondAttribute="bottom" id="dYn-l8-fYW"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ZPA-Y0-eFI" id="W2P-Qj-xbQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeN-JI-IEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652.5" y="31.690140845070424"/>
+        </scene>
+        <!--Toukou Ichiran View Controller-->
+        <scene sceneID="KUP-kB-GGQ">
+            <objects>
+                <viewController storyboardIdentifier="ToukouIchiranViewController" id="5Rb-DY-oRA" customClass="ToukouIchiranViewController" customModule="GolfWear" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="n8B-7N-6JO"/>
+                        <viewControllerLayoutGuide type="bottom" id="CBJ-uM-OXv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TGD-iI-i1p">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QIh-ri-OxM">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="0RG-Ws-e4l">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="oWn-NW-BCC" customClass="MyCollectionViewCell" customModule="GolfWear" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QIh-ri-OxM" firstAttribute="top" secondItem="n8B-7N-6JO" secondAttribute="bottom" id="G16-Ep-Jra"/>
+                            <constraint firstItem="CBJ-uM-OXv" firstAttribute="top" secondItem="QIh-ri-OxM" secondAttribute="bottom" id="cjc-Fg-nZx"/>
+                            <constraint firstAttribute="trailing" secondItem="QIh-ri-OxM" secondAttribute="trailing" id="hhM-0m-rcM"/>
+                            <constraint firstItem="QIh-ri-OxM" firstAttribute="leading" secondItem="TGD-iI-i1p" secondAttribute="leading" id="zCL-E7-XfF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="QIh-ri-OxM" id="YgQ-du-aek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYo-oQ-p53" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="714"/>
+        </scene>
+        <!--Coupon Ichiran View Controller-->
+        <scene sceneID="mKS-fs-YaA">
+            <objects>
+                <viewController storyboardIdentifier="CouponIchiranViewController" id="RaV-PX-Cmy" customClass="CouponIchiranViewController" customModule="GolfWear" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UlL-77-ZNl"/>
+                        <viewControllerLayoutGuide type="bottom" id="F4f-Hl-ZJv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6wd-1m-htA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="89" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IvL-Gn-ttY">
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" rowHeight="89" id="Qqi-do-KPA">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qqi-do-KPA" id="e8K-CJ-rkI">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="88"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICJ-wg-f7S">
+                                                    <rect key="frame" x="139" y="34" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGG-jq-fq1">
+                                                    <rect key="frame" x="16" y="4" width="83" height="80"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IvL-Gn-ttY" secondAttribute="trailing" id="MPc-eG-No9"/>
+                            <constraint firstItem="IvL-Gn-ttY" firstAttribute="leading" secondItem="6wd-1m-htA" secondAttribute="leading" id="Ve3-MW-JHU"/>
+                            <constraint firstItem="IvL-Gn-ttY" firstAttribute="top" secondItem="UlL-77-ZNl" secondAttribute="bottom" id="Z7Q-LN-TQI"/>
+                            <constraint firstItem="F4f-Hl-ZJv" firstAttribute="top" secondItem="IvL-Gn-ttY" secondAttribute="bottom" id="x5d-bd-4Ll"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="IvL-Gn-ttY" id="JMr-UU-N8U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vG-5f-nyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652.5" y="1381.6901408450703"/>
+        </scene>
+    </scenes>
+</document>

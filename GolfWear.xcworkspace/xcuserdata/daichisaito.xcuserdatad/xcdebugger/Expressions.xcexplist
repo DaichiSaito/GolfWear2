@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ColorAndBrandViewController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:ColorAndBrandViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "conditionBrands">
+            </PersistentString>
+            <PersistentString
+               value = "conditionBrands[String(indexPath.row)]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ColorAndBrandViewController.tableView(UITableView, didSelectRowAt : IndexPath) -&gt; ():ColorAndBrandViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
