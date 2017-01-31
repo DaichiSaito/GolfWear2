@@ -3,21 +3,35 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "ColorAndBrandViewController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:ColorAndBrandViewController.swift">
+         contextName = "SearchItemsTableViewCell.setCells(indexPath : IndexPath) -&gt; ():SearchItemsTableViewCell.swift">
          <PersistentStrings>
             <PersistentString
-               value = "conditionBrands">
+               value = "itemTopConditions.enumerated()">
             </PersistentString>
             <PersistentString
-               value = "conditionBrands[String(indexPath.row)]">
+               value = "indexPath.row">
+            </PersistentString>
+            <PersistentString
+               value = "key">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ColorAndBrandViewController.tableView(UITableView, didSelectRowAt : IndexPath) -&gt; ():ColorAndBrandViewController.swift">
+         contextName = "SearchResultViewController.tableView(UITableView, cellForRowAt : IndexPath) -&gt; UITableViewCell:SearchResultViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "indexPath.row">
+               value = "BrandsModel.sharedInstance.dataList2[indexPath.row]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ColorAndBrand2ViewController.viewDidLoad() -&gt; ():ColorAndBrand2ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "key">
+            </PersistentString>
+            <PersistentString
+               value = "ModelConditions.sharedInstance.get()[key!]?[&quot;brands&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

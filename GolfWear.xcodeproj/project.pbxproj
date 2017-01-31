@@ -74,6 +74,9 @@
 		948E028F1E0FBDF800600F7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 948E028E1E0FBDF800600F7D /* Assets.xcassets */; };
 		948E02921E0FBDF800600F7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948E02901E0FBDF800600F7D /* LaunchScreen.storyboard */; };
 		948F8C431E39EBA8007E2CEA /* BrandTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948F8C421E39EBA8007E2CEA /* BrandTableViewCell2.swift */; };
+		94C50EEA1E3F3671000ED379 /* ColorCollectionViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C50EE91E3F3671000ED379 /* ColorCollectionViewCell3.swift */; };
+		94EDE2F51E3C836B00065727 /* BrandsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDE2F41E3C836B00065727 /* BrandsModel.swift */; };
+		94EDE2F71E3C9C8400065727 /* BrandTableTableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EDE2F61E3C9C8400065727 /* BrandTableTableViewCell3.swift */; };
 		B31BABE2BDAEDA4B29036B28 /* Pods_GolfWear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9DE18F7E5CC6AFCE80CE46 /* Pods_GolfWear.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +154,9 @@
 		948E02931E0FBDF800600F7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		948E02991E0FBF9A00600F7D /* GolfWear-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GolfWear-Bridging-Header.h"; sourceTree = "<group>"; };
 		948F8C421E39EBA8007E2CEA /* BrandTableViewCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandTableViewCell2.swift; sourceTree = "<group>"; };
+		94C50EE91E3F3671000ED379 /* ColorCollectionViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell3.swift; sourceTree = "<group>"; };
+		94EDE2F41E3C836B00065727 /* BrandsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandsModel.swift; sourceTree = "<group>"; };
+		94EDE2F61E3C9C8400065727 /* BrandTableTableViewCell3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandTableTableViewCell3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +246,8 @@
 				943BE8F71E2A41AC00462357 /* AgeTableViewCell.xib */,
 				942AD3541E361DA5005AEDE4 /* ColorCollectionViewCell2.swift */,
 				948F8C421E39EBA8007E2CEA /* BrandTableViewCell2.swift */,
+				94EDE2F61E3C9C8400065727 /* BrandTableTableViewCell3.swift */,
+				94C50EE91E3F3671000ED379 /* ColorCollectionViewCell3.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 				9454D9FC1E2634B700868BB2 /* ModelConditions.swift */,
 				943BE8D61E28816D00462357 /* TableViewCellModel.swift */,
 				943BE8E81E2A25B900462357 /* SearchViewModel.swift */,
+				94EDE2F41E3C836B00065727 /* BrandsModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -472,6 +481,7 @@
 				9454D9F31E26229100868BB2 /* ColorChooseViewController.swift in Sources */,
 				9434F2CB1E21B6BE0058E6CD /* ToukouIchiranViewController.swift in Sources */,
 				9454D9F11E25F1A100868BB2 /* SearchConditionTestTableViewController.swift in Sources */,
+				94C50EEA1E3F3671000ED379 /* ColorCollectionViewCell3.swift in Sources */,
 				943BE8C51E28612D00462357 /* BrandSearchView.swift in Sources */,
 				9454D9FB1E2630F200868BB2 /* ModelBase.swift in Sources */,
 				943BE8EC1E2A2A2A00462357 /* SearchItemsTableViewCell.swift in Sources */,
@@ -480,6 +490,7 @@
 				943BE8D21E287F1C00462357 /* SeasonTableViewCell.swift in Sources */,
 				9454D9EB1E238D7200868BB2 /* UploadImageVM.swift in Sources */,
 				948E028A1E0FBDF800600F7D /* ViewController.swift in Sources */,
+				94EDE2F71E3C9C8400065727 /* BrandTableTableViewCell3.swift in Sources */,
 				948F8C431E39EBA8007E2CEA /* BrandTableViewCell2.swift in Sources */,
 				940D82E01E1F5B9600D116BA /* MyCollectionViewCell.swift in Sources */,
 				942AD3551E361DA5005AEDE4 /* ColorCollectionViewCell2.swift in Sources */,
@@ -507,6 +518,7 @@
 				943BE8FC1E2B04B200462357 /* ConditionVIewModel.swift in Sources */,
 				940D82E41E1F5FBD00D116BA /* IchiranView.swift in Sources */,
 				9434F2C91E20E6180058E6CD /* ProfileViewController.swift in Sources */,
+				94EDE2F51E3C836B00065727 /* BrandsModel.swift in Sources */,
 				943BE8E51E2A24EC00462357 /* SearchView.swift in Sources */,
 				948E02881E0FBDF800600F7D /* AppDelegate.swift in Sources */,
 				940D82D91E1F573800D116BA /* IchiranViewController.swift in Sources */,

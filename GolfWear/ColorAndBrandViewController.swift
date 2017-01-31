@@ -391,21 +391,21 @@ class ColorAndBrandViewController: UIViewController,UITextFieldDelegate {
     
     /* 編集ボタン押下時処理 */
     func decide() {
-        if let indexPaths = self.collectionView?.indexPathsForSelectedItems {
-            var selectedColorArray: NSMutableArray = []
-            var selectedBrandArray: NSMutableArray = []
-            for indexPath  in indexPaths {
-                print(colors[indexPath.row].colorText)
-                selectedColorArray.add(colors[indexPath.row].color)
-                
-            }
-            var a = ModelConditions.sharedInstance.get()
-            a.updateValue(selectedColorArray as AnyObject, forKey: ModelConditions.CONDITION_KEY.TOPS.rawValue)
-            ModelConditions.sharedInstance.set(condition: a)
-
-        }
-        
-        self.navigationController?.popViewController(animated: true)
+//        if let indexPaths = self.collectionView?.indexPathsForSelectedItems {
+//            var selectedColorArray: NSMutableArray = []
+//            var selectedBrandArray: NSMutableArray = []
+//            for indexPath  in indexPaths {
+//                print(colors[indexPath.row].colorText)
+//                selectedColorArray.add(colors[indexPath.row].color)
+//                
+//            }
+//            var a = ModelConditions.sharedInstance.get()
+//            a.updateValue(selectedColorArray as AnyObject, forKey: ModelConditions.CONDITION_KEY.TOPS.rawValue)
+//            ModelConditions.sharedInstance.set(condition: a)
+//
+//        }
+//        
+//        self.navigationController?.popViewController(animated: true)
     }
     
     

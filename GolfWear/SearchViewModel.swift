@@ -99,35 +99,43 @@ class SearchViewModel: NSObject, UITableViewDataSource, UIPickerViewDataSource {
                 cell.setCells(indexPath: indexPath)
                 return cell
             case ROW_TOPS:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
+                cell.key = ModelConditions.CONDITION_KEY.TOPS.rawValue
                 cell.setCells(indexPath: indexPath)
                 return cell
             case ROW_PANTS:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
+                cell.key = ModelConditions.CONDITION_KEY.PANTS.rawValue
                 cell.setCells(indexPath: indexPath)
                 return cell
             case ROW_OUTER:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
+                cell.key = ModelConditions.CONDITION_KEY.OUTER.rawValue
                 cell.setCells(indexPath: indexPath)
                 return cell
             case ROW_SHOSE:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
+                cell.key = ModelConditions.CONDITION_KEY.SHOSE.rawValue
                 cell.setCells(indexPath: indexPath)
                 return cell
             case ROW_HAT:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
+                cell.key = ModelConditions.CONDITION_KEY.HAT.rawValue
                 cell.setCells(indexPath: indexPath)
                 return cell
             case ROW_NECK:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
+                cell.key = ModelConditions.CONDITION_KEY.NECK.rawValue
                 cell.setCells(indexPath: indexPath)
                 return cell
             case ROW_OTHER:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
+                cell.key = ""
                 cell.setCells(indexPath: indexPath)
                 return cell
             default:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
+                cell.key = ModelConditions.CONDITION_KEY.TOPS.rawValue
                 cell.setCells(indexPath: indexPath)
                 return cell//仮
             }
@@ -137,6 +145,7 @@ class SearchViewModel: NSObject, UITableViewDataSource, UIPickerViewDataSource {
             switch indexPath.row {
             case ROW_SEX:
                 let cell = table.dequeueReusableCell(withIdentifier: "sexCell", for: indexPath)
+                
                 cell.setCells(indexPath: indexPath)
                 return cell
             case ROW_TALL:
@@ -158,7 +167,8 @@ class SearchViewModel: NSObject, UITableViewDataSource, UIPickerViewDataSource {
         case SECTION_TAG:
             switch indexPath.row {
             case ROW_TAG_ADD:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
+                cell.key = ModelConditions.CONDITION_KEY.TOPS.rawValue
                 cell.setCells(indexPath: indexPath)
                 return cell
                 

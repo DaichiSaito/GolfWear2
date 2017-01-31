@@ -79,21 +79,33 @@ class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewD
 //                let controller = self.storyboard!.instantiateViewController( withIdentifier: "ColorChooseViewController" ) as! ColorChooseViewController
 //                self.navigationController?.pushViewController(controller, animated: true)
             case dataSource.ROW_TOPS:
-                let controller = self.storyboard!.instantiateViewController( withIdentifier: "colorAndBrandViewController" ) as! ColorAndBrandViewController
-//                controller.selectedIndexPath = indexPath
+                let controller = self.storyboard!.instantiateViewController( withIdentifier: "colorAndBrand2ViewController" ) as! ColorAndBrand2ViewController
+                controller.key = ModelConditions.CONDITION_KEY.TOPS.rawValue
                 self.navigationController?.pushViewController(controller, animated: true)
             case dataSource.ROW_PANTS:
                 let controller = self.storyboard!.instantiateViewController( withIdentifier: "colorAndBrand2ViewController" ) as! ColorAndBrand2ViewController
-                //                controller.selectedIndexPath = indexPath
+                controller.key = ModelConditions.CONDITION_KEY.PANTS.rawValue
                 self.navigationController?.pushViewController(controller, animated: true)
                 break
             case dataSource.ROW_OUTER:
+                let controller = self.storyboard!.instantiateViewController( withIdentifier: "colorAndBrand2ViewController" ) as! ColorAndBrand2ViewController
+                controller.key = ModelConditions.CONDITION_KEY.OUTER.rawValue
+                self.navigationController?.pushViewController(controller, animated: true)
                 break
             case dataSource.ROW_SHOSE:
+                let controller = self.storyboard!.instantiateViewController( withIdentifier: "colorAndBrand2ViewController" ) as! ColorAndBrand2ViewController
+                controller.key = ModelConditions.CONDITION_KEY.SHOSE.rawValue
+                self.navigationController?.pushViewController(controller, animated: true)
                 break
             case dataSource.ROW_HAT:
+                let controller = self.storyboard!.instantiateViewController( withIdentifier: "colorAndBrand2ViewController" ) as! ColorAndBrand2ViewController
+                controller.key = ModelConditions.CONDITION_KEY.HAT.rawValue
+                self.navigationController?.pushViewController(controller, animated: true)
                 break
             case dataSource.ROW_NECK:
+                let controller = self.storyboard!.instantiateViewController( withIdentifier: "colorAndBrand2ViewController" ) as! ColorAndBrand2ViewController
+                controller.key = ModelConditions.CONDITION_KEY.NECK.rawValue
+                self.navigationController?.pushViewController(controller, animated: true)
                 break
             case dataSource.ROW_OTHER:
                 break

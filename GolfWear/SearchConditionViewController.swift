@@ -184,7 +184,7 @@ class SearchConditionViewController: UIViewController, UITableViewDataSource, UI
             label.text = "\(labelItemColorArray[indexPath.row])"
             
             let view = cell?.viewWithTag(2)
-            view?.backgroundColor = ModelConditions.sharedInstance.get()[ModelConditions.CONDITION_KEY_ARRAY[indexPath.row].rawValue] as! UIColor?
+//            view?.backgroundColor = ModelConditions.sharedInstance.get()[ModelConditions.CONDITION_KEY_ARRAY[indexPath.row].rawValue] as! UIColor?
             
         } else if (indexPath.section == SECTION_BRAND) {
             if (indexPath.row == ROW_BRAND_ADD) {

@@ -42,18 +42,18 @@ class ModelConditions : ModelBase {
 
     }
     
-    static var CONDITION_KEY_ARRAY = [
-//        CONDITION_KEY.SEX,
-//        CONDITION_KEY.TALL,
-        CONDITION_KEY.SEASON,
-        CONDITION_KEY.TOPS,
-        CONDITION_KEY.PANTS,
-        CONDITION_KEY.OUTER,
-        CONDITION_KEY.SHOSE,
-        CONDITION_KEY.HAT,
-        CONDITION_KEY.NECK,
-        CONDITION_KEY.OTHERITEM
-    ]
+//    static var CONDITION_KEY_ARRAY = [
+////        CONDITION_KEY.SEX,
+////        CONDITION_KEY.TALL,
+//        CONDITION_KEY.SEASON,
+//        CONDITION_KEY.TOPS,
+//        CONDITION_KEY.PANTS,
+//        CONDITION_KEY.OUTER,
+//        CONDITION_KEY.SHOSE,
+//        CONDITION_KEY.HAT,
+//        CONDITION_KEY.NECK,
+//        CONDITION_KEY.OTHERITEM
+//    ]
 //    static var conditionModel: Dictionary<String,AnyObject> = Dictionary<String,AnyObject>()
 //    static var conditionColor: Dictionary<String,AnyObject> = Dictionary<String,AnyObject>()
 //    static var conditionBrand: Dictionary<String,AnyObject> = Dictionary<String,AnyObject>()

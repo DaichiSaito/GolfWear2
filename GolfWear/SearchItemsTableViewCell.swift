@@ -18,6 +18,7 @@ class SearchItemsTableViewCell: UITableViewCell {
     @IBOutlet weak var overLabelForBrand: UILabel!
     @IBOutlet weak var selectedBrands: UILabel!
     var selectedColorArray = [UIView]()
+    var key: String?
 //    var selectedColorArray = [selectedColor1,selectedColor2,selectedColor3]
     
     let itemLabels: NSArray = ["シーズン","トップス","パンツ・スカート","アウター","シューズ","帽子","ネックウォーマー","その他"]
@@ -56,9 +57,9 @@ class SearchItemsTableViewCell: UITableViewCell {
 //        selectedColor3.layer.borderColor = UIColor.white.cgColor
 //        selectedColor3.layer.borderWidth = 1
         
-        if let itemTopConditions = ModelConditions.sharedInstance.get()[ModelConditions.CONDITION_KEY_ARRAY[indexPath.row].rawValue] as? NSArray {
+        if let itemTopConditionsColor = ModelConditions.sharedInstance.get()[key!]?["colors"] as? NSArray {
 //            var index: Int = 0
-            for (index, itemTopCondition) in itemTopConditions.enumerated() {
+            for (index, itemTopCondition) in itemTopConditionsColor.enumerated() {
                 if index == 3 {
                     overLabelForColor.isHidden = false
                     break
@@ -70,6 +71,28 @@ class SearchItemsTableViewCell: UITableViewCell {
                 (selectedColorArray[index]).isHidden = false
                 
             }
+        }
+        
+        if let itemTopConditionsBrand = ModelConditions.sharedInstance.get()[key!]?["brands"] as? [String] {
+            //            var index: Int = 0
+            var tmpText: String = ""
+            for brandText in itemTopConditionsBrand {
+//                if index == 3 {
+//                    overLabelForColor.isHidden = false
+//                    break
+//                }
+//                (selectedColorArray[index]).backgroundColor = itemTopCondition as? UIColor
+//                (selectedColorArray[index]).layer.cornerRadius = 7.5 //どれくらい丸くするのか
+//                (selectedColorArray[index]).layer.masksToBounds = true //viewに丸くする許可を出す
+//                (selectedColorArray[index]).layer.borderColor = UIColor.white.cgColor
+//                (selectedColorArray[index]).isHidden = false
+//                tmpText?.append(brandText as! String)
+                if let brandName = brandText as String! {
+                    tmpText += brandName + ","
+                }
+//                tmpText?.append(brandText)
+            }
+            self.selectedBrands.text = tmpText
         }
         
     }
