@@ -9,10 +9,13 @@
                value = "itemTopConditions.enumerated()">
             </PersistentString>
             <PersistentString
-               value = "indexPath.row">
+               value = "key">
             </PersistentString>
             <PersistentString
-               value = "key">
+               value = "ModelConditions.sharedInstance.get()[key!]?[&quot;brands&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.row">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -21,6 +24,14 @@
          <PersistentStrings>
             <PersistentString
                value = "BrandsModel.sharedInstance.dataList2[indexPath.row]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "static CommonUtl.createCondition() -&gt; ():CommonUtl.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "ModelConditions.sharedInstance.get()[&quot;sex&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

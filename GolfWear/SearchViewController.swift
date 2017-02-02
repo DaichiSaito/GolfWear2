@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewDelegate, UIToolbarDelegate {
+class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewDelegate, UIToolbarDelegate, UITextFieldDelegate {
     
     var dataSource: SearchViewModel  = SearchViewModel()
     
@@ -18,6 +18,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewD
     var isSetupSexAlert: Bool = false
     var isSetupTallPickUpView: Bool = false
     var isSetupAgePickUpView: Bool = false
+//    var isSetupTagTextField: Bool = false
     
     var currentSelectedCell: UITableViewCell? = nil
     
@@ -46,9 +47,24 @@ class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewD
         searchView.tableView.register(tallNib, forCellReuseIdentifier: "tallCell")
         let ageNib = UINib(nibName: "AgeTableViewCell", bundle: nil)
         searchView.tableView.register(ageNib, forCellReuseIdentifier: "ageCell")
-        
+        let tagInputNib = UINib(nibName: "TagInputTableViewCell", bundle: nil)
+        searchView.tableView.register(tagInputNib, forCellReuseIdentifier: "tagInputCell")
+        let tagNib = UINib(nibName: "TagTableViewCell", bundle: nil)
+        searchView.tableView.register(tagNib, forCellReuseIdentifier: "tagCell")
         
         ModelConditions.sharedInstance.addObserver(self, forKeyPath: "condition", options: .new, context: nil)
+        TagsModel.sharedInstance.addObserver(self, forKeyPath: "tags", options: .new, context: nil)
+        
+        // キーボード表示のタイミング
+        NotificationCenter.default.addObserver(self, selector: #selector(SearchViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        
+        // キーボード非表示のタイミング
+        NotificationCenter.default.addObserver(self, selector: #selector(SearchViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        // テキストフィールドの内容が変化したタイミング
+        NotificationCenter.default.addObserver(self, selector:#selector(SearchViewController.textFieldDidChange(_:)),
+                                                         name: NSNotification.Name.UITextFieldTextDidChange,
+                                                         object: nil)
         
     }
 
@@ -59,14 +75,25 @@ class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewD
     
     deinit {
         ModelConditions.sharedInstance.removeObserver(self, forKeyPath: "condition")
+        TagsModel.sharedInstance.removeObserver(self, forKeyPath: "tags")
     }
     
 
     // ModelCondition.conditionを監視 変更があったら再描画
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        NSLog("Called:" + keyPath!)
         let searchView = self.view as! SearchView
-        searchView.tableView.reloadData()
+        NSLog("Called:" + keyPath!)
+        if keyPath == "condition" {
+            searchView.tableView.reloadData()
+        } else if keyPath == "tags" {
+            searchView.tableView.reloadData()
+//            searchView.tableView.reloadSections(IndexSet(integer: 2), with: .automatic)
+        }
+        
+//        for subview in searchView.subviews {
+//            subview.resignFirstResponder()
+//        }
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -224,6 +251,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewD
         case 2:
             switch indexPath.row {
             case dataSource.ROW_TAG_ADD:
+                
+
                 break
             case dataSource.ROW_TAG_LIST:
                 break
@@ -282,7 +311,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewD
             var a = ModelConditions.sharedInstance.get()
             a.updateValue("\(selectedTall[0])〜\(selectedTall[1])cm" as AnyObject, forKey: ModelConditions.CONDITION_KEY.TALL.rawValue)
             ModelConditions.sharedInstance.set(condition: a)
-            ModelConditions.sharedInstance.set(condition: a)
+//            ModelConditions.sharedInstance.set(condition: a)
             
 //            DispatchQueue.main.async(execute: {
 //                self.currentSelectedCell?.resignFirstResponder()
@@ -299,12 +328,78 @@ class SearchViewController: UIViewController, UITableViewDelegate, UIPickerViewD
             a.updateValue("\(selectedAge[0])〜\(selectedAge[1])歳" as AnyObject, forKey: ModelConditions.CONDITION_KEY.AGE.rawValue)
             ModelConditions.sharedInstance.set(condition: a)
             
+        case 3:
+            print("textFieldのクローズ")
         default:break
         }
         
         
         
 //        self.averageCostTextField.resignFirstResponder()
+    }
+    
+    /* キーボードの表示時 */
+    func keyboardWillShow(_ notification: NSNotification) {
+        guard let info = notification.userInfo else {
+            fatalError("Unexpected notification")
+        }
+        
+        // キーボードの高さを取得
+        guard let keyboardHeight = (info[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height else {
+            fatalError("No keyboard height found")
+        }
+        
+        // キーボード表示アニメーションの時間を取得
+        guard let animationDuration = (info[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue else {
+            fatalError("No keyboard height found")
+        }
+        
+        let view = self.view as? SearchView
+        
+        // 取得した情報を元にスクロールビューのレイアウトを変更する
+        view?.bottomConstraint.constant = keyboardHeight
+        UIView.animate(withDuration: animationDuration, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    /* キーボードの非表示時 */
+    func keyboardWillHide(_ notification: NSNotification) {
+        
+        guard let info = notification.userInfo else {
+            fatalError("Unexpected notification")
+        }
+        
+        // キーボード表示アニメーションの時間を取得
+        guard let animationDuration = (info[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue else {
+            fatalError("No keyboard height found")
+        }
+        let view = self.view as? SearchView
+        
+        // 取得した情報を元にスクロールビューのレイアウトを変更する
+        view?.bottomConstraint.constant = 0
+        UIView.animate(withDuration: animationDuration, animations: { () -> Void in
+            self.view.layoutIfNeeded()
+        })
+    }
+    /* テキストフィールドの内容が変化した時 */
+    func textFieldDidChange(_ notification:NSNotification) {
+//        let view = self.view as? SearchView
+//        dataSource.tagInputCell?.tagTextField.text?.characters.count
+        let length = dataSource.tagInputCell?.tagTextField.text?.characters.count
+        dataSource.tagInputCell?.addButton.isHidden = (length! == 0)
+//        if (length > 0) {
+//            dataSource.tagInputCell?.addButton.isHidden = false
+//        } else {
+//            dataSource.tagInputCell?.addButton.isHidden =
+//        }
+//        view?.commentCountLabel.text = String(200 - length!)
+//        if ((200 - length!) < 0) {
+//            view?.commentCountLabel.textColor = UIColor.redColor()
+//            view?.commentCountLabel.text = String(200 - length!) + "  字数オーバーです!"
+//        } else {
+//            view?.commentCountLabel.textColor = UIColor.blueColor()
+//        }
     }
 
 }

@@ -93,6 +93,8 @@ class SearchItemsTableViewCell: UITableViewCell {
 //                tmpText?.append(brandText)
             }
             self.selectedBrands.text = tmpText
+        } else {
+            self.selectedBrands.text = nil
         }
         
     }

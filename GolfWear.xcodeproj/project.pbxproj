@@ -55,6 +55,11 @@
 		943DC5E61E3C538800F4813D /* ColorAndBrand2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC5E51E3C538800F4813D /* ColorAndBrand2ViewController.swift */; };
 		943DC5E81E3C557700F4813D /* SearchBrandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC5E71E3C557700F4813D /* SearchBrandViewController.swift */; };
 		943DC5EA1E3C59F600F4813D /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC5E91E3C59F600F4813D /* SearchResultViewController.swift */; };
+		943DC5ED1E40BEAA00F4813D /* TagInputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC5EB1E40BEAA00F4813D /* TagInputTableViewCell.swift */; };
+		943DC5EE1E40BEAA00F4813D /* TagInputTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943DC5EC1E40BEAA00F4813D /* TagInputTableViewCell.xib */; };
+		943DC5F11E40BF0300F4813D /* TagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC5EF1E40BF0300F4813D /* TagTableViewCell.swift */; };
+		943DC5F21E40BF0300F4813D /* TagTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 943DC5F01E40BF0300F4813D /* TagTableViewCell.xib */; };
+		943DC5F41E40CD8000F4813D /* TagsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943DC5F31E40CD8000F4813D /* TagsModel.swift */; };
 		9454D9E41E23891E00868BB2 /* IchijiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454D9E31E23891E00868BB2 /* IchijiViewController.swift */; };
 		9454D9E61E23892F00868BB2 /* IchijiStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9454D9E51E23892F00868BB2 /* IchijiStoryboard.storyboard */; };
 		9454D9E91E238B5F00868BB2 /* CommonUtl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9454D9E81E238B5F00868BB2 /* CommonUtl.swift */; };
@@ -132,6 +137,11 @@
 		943DC5E51E3C538800F4813D /* ColorAndBrand2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAndBrand2ViewController.swift; sourceTree = "<group>"; };
 		943DC5E71E3C557700F4813D /* SearchBrandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBrandViewController.swift; sourceTree = "<group>"; };
 		943DC5E91E3C59F600F4813D /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		943DC5EB1E40BEAA00F4813D /* TagInputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagInputTableViewCell.swift; sourceTree = "<group>"; };
+		943DC5EC1E40BEAA00F4813D /* TagInputTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagInputTableViewCell.xib; sourceTree = "<group>"; };
+		943DC5EF1E40BF0300F4813D /* TagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagTableViewCell.swift; sourceTree = "<group>"; };
+		943DC5F01E40BF0300F4813D /* TagTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TagTableViewCell.xib; sourceTree = "<group>"; };
+		943DC5F31E40CD8000F4813D /* TagsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsModel.swift; sourceTree = "<group>"; };
 		9454D9E31E23891E00868BB2 /* IchijiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IchijiViewController.swift; sourceTree = "<group>"; };
 		9454D9E51E23892F00868BB2 /* IchijiStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = IchijiStoryboard.storyboard; sourceTree = "<group>"; };
 		9454D9E81E238B5F00868BB2 /* CommonUtl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonUtl.swift; sourceTree = "<group>"; };
@@ -248,6 +258,10 @@
 				948F8C421E39EBA8007E2CEA /* BrandTableViewCell2.swift */,
 				94EDE2F61E3C9C8400065727 /* BrandTableTableViewCell3.swift */,
 				94C50EE91E3F3671000ED379 /* ColorCollectionViewCell3.swift */,
+				943DC5EB1E40BEAA00F4813D /* TagInputTableViewCell.swift */,
+				943DC5EC1E40BEAA00F4813D /* TagInputTableViewCell.xib */,
+				943DC5EF1E40BF0300F4813D /* TagTableViewCell.swift */,
+				943DC5F01E40BF0300F4813D /* TagTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -262,6 +276,7 @@
 				943BE8D61E28816D00462357 /* TableViewCellModel.swift */,
 				943BE8E81E2A25B900462357 /* SearchViewModel.swift */,
 				94EDE2F41E3C836B00065727 /* BrandsModel.swift */,
+				943DC5F31E40CD8000F4813D /* TagsModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -403,6 +418,7 @@
 				943BE8DB1E29B14200462357 /* ColorSelectView.xib in Resources */,
 				940D82E21E1F5BCA00D116BA /* MyCollectionViewCell.xib in Resources */,
 				943BE8E71E2A24F600462357 /* SearchView.xib in Resources */,
+				943DC5F21E40BF0300F4813D /* TagTableViewCell.xib in Resources */,
 				940D82D71E1F520800D116BA /* IchiranStoryboard.storyboard in Resources */,
 				943BE8C71E28613C00462357 /* BrandSearchView.xib in Resources */,
 				943BE8F11E2A419900462357 /* SexTableViewCell.xib in Resources */,
@@ -415,6 +431,7 @@
 				940D82EC1E20852200D116BA /* ProfileView.xib in Resources */,
 				940D82D51E1F501500D116BA /* HomeStoryboard.storyboard in Resources */,
 				943BE8CF1E28698A00462357 /* BrandTableViewCell.xib in Resources */,
+				943DC5EE1E40BEAA00F4813D /* TagInputTableViewCell.xib in Resources */,
 				940D82E61E20720C00D116BA /* MyPageStoryboard.storyboard in Resources */,
 				948E028D1E0FBDF800600F7D /* Main.storyboard in Resources */,
 			);
@@ -482,6 +499,7 @@
 				9434F2CB1E21B6BE0058E6CD /* ToukouIchiranViewController.swift in Sources */,
 				9454D9F11E25F1A100868BB2 /* SearchConditionTestTableViewController.swift in Sources */,
 				94C50EEA1E3F3671000ED379 /* ColorCollectionViewCell3.swift in Sources */,
+				943DC5ED1E40BEAA00F4813D /* TagInputTableViewCell.swift in Sources */,
 				943BE8C51E28612D00462357 /* BrandSearchView.swift in Sources */,
 				9454D9FB1E2630F200868BB2 /* ModelBase.swift in Sources */,
 				943BE8EC1E2A2A2A00462357 /* SearchItemsTableViewCell.swift in Sources */,
@@ -497,6 +515,7 @@
 				940D82E81E20723500D116BA /* MyPageViewController.swift in Sources */,
 				9434F2CD1E21BECB0058E6CD /* CouponIchiranViewController.swift in Sources */,
 				9454D9F81E26275C00868BB2 /* ColorCollectionViewCell.swift in Sources */,
+				943DC5F11E40BF0300F4813D /* TagTableViewCell.swift in Sources */,
 				943BE8FF1E2D57AC00462357 /* PopUpPickerViewBase.swift in Sources */,
 				940D82D11E1F4D7F00D116BA /* TutorialViewController.swift in Sources */,
 				9454D9FD1E2634B700868BB2 /* ModelConditions.swift in Sources */,
@@ -511,6 +530,7 @@
 				943BE8D51E287F8700462357 /* SearchTableViewController.swift in Sources */,
 				943BE8DD1E29B15100462357 /* ColorSelectView.swift in Sources */,
 				943DC5E81E3C557700F4813D /* SearchBrandViewController.swift in Sources */,
+				943DC5F41E40CD8000F4813D /* TagsModel.swift in Sources */,
 				943BE8F41E2A41A200462357 /* TallTableViewCell.swift in Sources */,
 				9454D9EF1E25008000868BB2 /* SearchConditionViewController.swift in Sources */,
 				9454D9ED1E238DD000868BB2 /* CodeDef.swift in Sources */,

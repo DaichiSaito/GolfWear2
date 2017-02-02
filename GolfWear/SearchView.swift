@@ -10,6 +10,7 @@ import UIKit
 
 class SearchView: UIView {
 
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     /*
     // Only override draw() if you perform custom drawing.

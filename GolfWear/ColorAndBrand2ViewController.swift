@@ -117,6 +117,7 @@ class ColorAndBrand2ViewController: UIViewController,UITextFieldDelegate {
 //            (a[key!] as! Dictionary)["colors"] = selectedColorArray
             var dic = [
                 "colors" : selectedColorArray,
+                "colorIndexPaths" : indexPaths,
                 "brands" : BrandsModel.sharedInstance.selectedBrands
             ] as [String : Any]
             a.updateValue(dic as AnyObject, forKey: key!)
@@ -140,6 +141,15 @@ extension ColorAndBrand2ViewController: UICollectionViewDataSource {
         //        view?.backgroundColor = colors[indexPath.row].color
         //        label.text = colors[indexPath.row].colorText
 //        cell.backgroundColor = colors[indexPath.row].color
+        if let indexPaths = ModelConditions.sharedInstance.get()[key!]?["colorIndexPaths"] as? [IndexPath] {
+            for myIndexPath in indexPaths {
+                if myIndexPath == indexPath {
+                    cell.isSelected = true
+                    collectionView.selectItem(at: myIndexPath, animated: true, scrollPosition: .bottom)
+                    
+                }
+            }
+        }
         cell.setCells(at: indexPath)
         return cell
     }

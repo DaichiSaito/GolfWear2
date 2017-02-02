@@ -13,7 +13,7 @@ extension UITableViewCell {
         
     }
 }
-class SearchViewModel: NSObject, UITableViewDataSource, UIPickerViewDataSource {
+class SearchViewModel: NSObject, UITableViewDataSource, UIPickerViewDataSource, UITextFieldDelegate {
     
     
     /* セクション情報 */
@@ -76,6 +76,9 @@ class SearchViewModel: NSObject, UITableViewDataSource, UIPickerViewDataSource {
                                         ["11","20"],
                                         ["21","30"],
                                         ["31","40"]]
+    
+    /* タグ一覧 */
+//    var tags = [String]()
     // Table Viewのセルの数を指定
     func tableView(_ table: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = getSectionInfo(section: section)
@@ -85,10 +88,15 @@ class SearchViewModel: NSObject, UITableViewDataSource, UIPickerViewDataSource {
             case .modelInfo:
                 return 3
             case .tagInfo:
-                return 1
+                return TagsModel.sharedInstance.tags.count + 1
         }
     }
     
+    /* TagTextFieldのセッティングフラグ */
+    var isSetupTagTextField: Bool = false
+    
+    /* TagInputCell保持用 */
+    var tagInputCell: TagInputTableViewCell?
     //各セルの要素を設定する
     func tableView(_ table: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
@@ -167,17 +175,45 @@ class SearchViewModel: NSObject, UITableViewDataSource, UIPickerViewDataSource {
         case SECTION_TAG:
             switch indexPath.row {
             case ROW_TAG_ADD:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath) as! SearchItemsTableViewCell
-                cell.key = ModelConditions.CONDITION_KEY.TOPS.rawValue
+                let cell = table.dequeueReusableCell(withIdentifier: "tagInputCell", for: indexPath) as! TagInputTableViewCell
+//                let cellTagAdd = tableView.cellForRow(at: indexPath) as! TagInputTableViewCell
+                if !isSetupTagTextField {
+                    isSetupTagTextField = true
+                    //                    let tallPicker = UIPickerView()
+                    //                    tallPicker.showsSelectionIndicator = true
+                    //                    tallPicker.delegate = self
+                    //                    tallPicker.dataSource = dataSource
+                    //                    tallPicker.tag = 1
+                    
+                    //closeToolBar作成。ニョキ担当
+                    let closeToolBar = UIToolbar(frame: CGRect(x: 0, y: UIScreen.main.bounds.height/6, width: UIScreen.main.bounds.width, height: 40.0))
+                    closeToolBar.barStyle = UIBarStyle.default
+                    closeToolBar.sizeToFit()
+                    
+                    // closeの文字を右側に表示させるためのスペーサー
+                    let spacer = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil)
+                    
+                    // ToolBar閉じるボタンを追加
+                    let myToolBarButton = UIBarButtonItem(title: "Close", style: .plain, target: self, action: #selector(SearchViewController.onClick(_:)))
+                    myToolBarButton.tag = 3
+                    closeToolBar.items = [spacer, myToolBarButton]
+                    
+                    
+                    //                    cellTagAdd.inputView = tallPicker
+//                    cell.tagTextField.delegate = self
+                    cell.tagTextField.inputAccessoryView = closeToolBar
+                    
+                    tagInputCell = cell
+                }
                 cell.setCells(indexPath: indexPath)
                 return cell
                 
-            case ROW_TAG_LIST:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
-                cell.setCells(indexPath: indexPath)
-                return cell
+//            case ROW_TAG_LIST<:
+//                let cell = table.dequeueReusableCell(withIdentifier: "tagCell", for: indexPath) as! TagTableViewCell
+//                cell.setCells(indexPath: indexPath)
+//                return cell
             default:
-                let cell = table.dequeueReusableCell(withIdentifier: "itemsCell", for: indexPath)
+                let cell = table.dequeueReusableCell(withIdentifier: "tagCell", for: indexPath) as! TagTableViewCell
                 cell.setCells(indexPath: indexPath)
                 return cell
             }
@@ -297,5 +333,17 @@ class SearchViewModel: NSObject, UITableViewDataSource, UIPickerViewDataSource {
             return 0
         }
     }
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        // 変更があるとここに来る
+//        print("textField!!!")
+//        if ((textField.text?.characters.count)! > 0) {
+//            tagInputCell?.addButton.isHidden = false
+//        } else {
+//            tagInputCell?.addButton.isHidden = true
+//        }
+//        
+//        return true
+//    }
     
 }

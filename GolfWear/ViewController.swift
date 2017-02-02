@@ -39,7 +39,7 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate, UINavigationCo
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addObserver(self, forKeyPath: "imageInfo", options: [.new, .old], context: nil)
-        self.loadImageData()
+//        self.loadImageData()
 //        setupView()
         // Do any additional setup after loading the view, typically from a nib.
         
@@ -59,6 +59,10 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate, UINavigationCo
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loadImageData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -183,8 +187,10 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate, UINavigationCo
          * NCMBQuery.hを参照するとNCMBQueryのインスタンスメソッドの引数にとるべき値等が見れます。
          *
          */
+        CommonUtl.createCondition()
         var query: NCMBQuery?
         query = NCMBQuery(className: "WEARIMAGE")
+        query?.whereKey("modelAge", equalTo: 25)
         query!.findObjectsInBackground({(objects, error) in
             
             if error == nil {

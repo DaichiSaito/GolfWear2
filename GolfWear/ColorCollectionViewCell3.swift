@@ -39,6 +39,11 @@ class ColorCollectionViewCell3: UICollectionViewCell {
         self.colorView.backgroundColor = colors[indexPath.row].color
         // ラベル
         self.colorText.text = colors[indexPath.row].colorText
+        // 丸く
+        self.colorView.layer.cornerRadius = 15.0 //どれくらい丸くするのか
+        self.colorView.layer.masksToBounds = true //viewに丸くする許可を出す
+        self.colorView.layer.borderColor = UIColor.black.cgColor
+        self.colorView.layer.borderWidth = 1
         // チェックマーク
         if isSelected {
             self.checkImageView.isHidden = false

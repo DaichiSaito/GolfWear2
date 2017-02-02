@@ -63,4 +63,25 @@ class CommonUtl: NSObject {
         return dst!
     }
     
+    /* 検索条件の変換 */
+    static func createCondition(/*condition: Dictionary<String,AnyObject>*/) {
+        let season = ModelConditions.sharedInstance.get()["season"]
+        let topsColor = ModelConditions.sharedInstance.get()["tops"]?["colors"]
+        let topsBrand = ModelConditions.sharedInstance.get()["tops"]?["brands"]
+        let pantsColor = ModelConditions.sharedInstance.get()["pants"]?["colors"]
+        let pantsBrand = ModelConditions.sharedInstance.get()["pants"]?["brands"]
+        let outerColor = ModelConditions.sharedInstance.get()["outer"]?["colors"]
+        let outerBrand = ModelConditions.sharedInstance.get()["outer"]?["brands"]
+        let shoseColor = ModelConditions.sharedInstance.get()["shose"]?["colors"]
+        let shoseBrand = ModelConditions.sharedInstance.get()["shose"]?["brands"]
+        let hatColor = ModelConditions.sharedInstance.get()["hat"]?["colors"]
+        let hatBrand = ModelConditions.sharedInstance.get()["hat"]?["brands"]
+        let neckColor = ModelConditions.sharedInstance.get()["neck"]?["colors"]
+        let neckBrand = ModelConditions.sharedInstance.get()["neck"]?["brands"]
+        let modelSex = ModelConditions.sharedInstance.get()["sex"]
+        let modelTall = ModelConditions.sharedInstance.get()["tall"]
+        let modelAge = ModelConditions.sharedInstance.get()["age"]
+        
+    }
+    
 }
