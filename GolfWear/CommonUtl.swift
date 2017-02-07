@@ -41,7 +41,7 @@ class CommonUtl: NSObject {
     
     /* 画像のリサイズ */
     static func resizeImage(src: UIImage) -> UIImage {
-        let maxLongSide:CGFloat = 10//414
+        let maxLongSide:CGFloat = 414
         // リサイズが必要か？
         let ss = src.size
         if ( ss.width <= maxLongSide && ss.height <= maxLongSide ) {

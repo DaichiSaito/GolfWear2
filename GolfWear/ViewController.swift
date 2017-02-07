@@ -10,6 +10,8 @@ import UIKit
 import MDCSwipeToChoose
 import NCMB
 class ViewController: UIViewController, MDCSwipeToChooseDelegate, UINavigationControllerDelegate{
+    
+    @IBOutlet weak var backgroundImageView: UIImageView!
     dynamic var imageInfo = [] as NSArray
     fileprivate var frontCardView: MDCSwipeToChooseView?
     fileprivate var backCardView: MDCSwipeToChooseView?
@@ -150,12 +152,12 @@ class ViewController: UIViewController, MDCSwipeToChooseDelegate, UINavigationCo
         self.frontCardView = view
         self.currentIndex = index
         
-//        let transitionAnim = CATransition()
-//        transitionAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        transitionAnim.type = kCATransitionFade
-//        transitionAnim.duration = 0.5
-//        self.backgroundImageView.layer.addAnimation(transitionAnim, forKey: "transition")
-//        self.backgroundImageView.image = view.mainImageView.image
+        let transitionAnim = CATransition()
+        transitionAnim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        transitionAnim.type = kCATransitionFade
+        transitionAnim.duration = 0.5
+        self.backgroundImageView.layer.add(transitionAnim, forKey: "transition")
+        self.backgroundImageView.image = frontCardView?.imageView.image//view.mainImageView.image
     }
     
     func view(_ view: UIView!, wasChosenWith direction: MDCSwipeDirection) {
